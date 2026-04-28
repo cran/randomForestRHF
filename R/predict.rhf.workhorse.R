@@ -92,7 +92,7 @@ predict.rhf.workhorse <-  function(object,
   }
   else {
     object.version <- as.integer(unlist(strsplit(object$version, "[.]")))
-    installed.version <- as.integer(unlist(strsplit("1.0.0", "[.]")))
+    installed.version <- as.integer(unlist(strsplit("1.0.1", "[.]")))
     minimum.version <- as.integer(unlist(strsplit("0.0.0.0", "[.]")))
     object.version.adj <- object.version[1] + (object.version[2]/10) + (object.version[3]/100)
     installed.version.adj <- installed.version[1] + (installed.version[2]/10) + (installed.version[3]/100)
@@ -230,7 +230,7 @@ predict.rhf.workhorse <-  function(object,
                                        if (is.null(m.target.idx)) NULL else as.integer(m.target.idx)),
                                   list(as.integer(length(yvar.types)),
                                        if (is.null(yvar.types)) NULL else as.character(yvar.types),
-                                       if (is.null(yvar.types)) NULL else as.integer(yvar.nlevels),
+                                       if (is.null(yvar.nlevels)) NULL else as.integer(yvar.nlevels),
                                        if (is.null(yvar.nlevels)) NULL else sapply(1:length(yvar.nlevels), function(nn) {as.integer(length(yvar.nlevels[[nn]]))}),
                                        if (is.null(subj)) NULL else as.integer(subj),
                                        if (is.null(event.info)) as.integer(0) else as.integer(length(event.info$event.type)),
@@ -244,8 +244,8 @@ predict.rhf.workhorse <-  function(object,
                                   },
                                   if (is.null(yvar.types)) NULL else as.double(as.vector(data.matrix(yvar))),
                                   list(as.integer(ncol(xvar)),
-                                       as.character(xvar.types),
-                                       if (is.null(xvar.types)) NULL else as.integer(xvar.nlevels),
+                                       if (is.null(xvar.types)) NULL else as.character(xvar.types),
+                                       if (is.null(xvar.nlevels)) NULL else as.integer(xvar.nlevels),
                                        if (is.null(xvar.nlevels)) NULL else sapply(1:length(xvar.nlevels), function(nn) {as.integer(length(xvar.nlevels[[nn]]))}),
                                        NULL,
                                        NULL),

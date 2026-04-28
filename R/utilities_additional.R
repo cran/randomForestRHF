@@ -56,7 +56,6 @@ get.experimental.bits  <- function(experimental.bits, trace) {
   }
   return (experimental.bits)
 }
-## This little function took just over 20 minutes on ChatGPT Pro.  Lol.
 # Returns TRUE if the given 0-7 bit is set in an 8-bit integer, FALSE otherwise.
 # - value: integer (vectorized); values outside 0..255 are masked to 8 bits
 # - bit: single integer in 0..7 (0 = least significant bit)

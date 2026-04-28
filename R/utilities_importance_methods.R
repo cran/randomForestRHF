@@ -28,12 +28,6 @@ print.importance.rhf <- function(x,
     "  long:      imp.t$importance.long",
     ""
   )
-  header <- c(
-      header,
-      "  matrix:    imp.t$importance.matrix (variables x time)",
-      "  long:      imp.t$importance.long",
-      ""
-  )
   message(paste(header, collapse = "\n"))
   score.q90 <- .rhf_row_summary(x$importance.matrix, rank.by = "q90")
   score.median <- .rhf_row_summary(x$importance.matrix, rank.by = "median")

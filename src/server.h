@@ -10,6 +10,9 @@
   #define RF_LAST_SOCK_ERR() WSAGetLastError()
   #define RF_EWOULDBLOCK WSAEWOULDBLOCK
 #else
+  #include <sys/types.h>
+  #include <sys/time.h>
+  #include <sys/select.h>
   #include <unistd.h>
   #include <arpa/inet.h>
   #include <netinet/in.h>

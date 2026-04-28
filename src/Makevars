@@ -69,12 +69,9 @@ SRCS_SHARED = \
   shared/stackPreDefined.c \
   shared/survival.c \
   shared/termBaseOps.c \
-  shared/trace.c
+  shared/trace.c \
 
 ## Tell R exactly which objects belong in the shared library
 OBJECTS = $(SRCS_MAIN:.c=.o) $(SRCS_SHARED:.c=.o)
-
-## Do NOT override the default "all" target – R's own makefiles provide that.
-# all: $(SHLIB)
 
 
