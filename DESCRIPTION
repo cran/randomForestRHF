@@ -1,6 +1,6 @@
 Package: randomForestRHF
-Version: 1.0.1
-Date: 2026-04-27
+Version: 2.0.0
+Date: 2026-08-27
 Title: Random Hazard Forests
 Authors@R: c(person("Hemant", "Ishwaran", email = "hemant.ishwaran@gmail.com", role = "aut"),
   person("Udaya B.", "Kogalur", email = "ubk@kogalur.com", role = c("aut", "cre")))
@@ -24,6 +24,6 @@ Description: Random Hazard Forests (RHF) extend Random Survival
 License: GPL (>= 3)
 URL: https://www.randomforestsrc.org/ https://ishwaran.org/
 NeedsCompilation: yes
-Packaged: 2026-04-27 21:39:07 UTC; kogalur
+Packaged: 2026-08-27 17:18:50 UTC; kogalur
 Repository: CRAN
-Date/Publication: 2026-04-28 08:10:03 UTC
+Date/Publication: 2026-08-28 07:00:38 UTC
